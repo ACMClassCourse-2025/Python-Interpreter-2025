@@ -26,59 +26,6 @@ pacman -S antlr4-runtime
 
 ### 生成语法树
 
-#### ~~使用 VScode 插件~~（由于增加语法的原因已弃用）
-
-~~首先在 Windows 环境下安装插件（注意，不要在 WSL 环境下安装）：~~
-
-![vscode-plugin](https://github.com/ACMClassCourse-2023/Python-Interpreter-2023/blob/main/docs/vscode-plugin.png)
-
-~~安装后，点击卸载旁的箭头，安装 2.3.1 版本。~~
-
-![vscode-install](https://github.com/ACMClassCourse-2023/Python-Interpreter-2023/blob/main/docs/vscode-install.png)
-
-~~安装完后重新加载。打开 `Python3.g4` 文件，右边会出现对应插件的图标，点击，等待其中的 PARSER RULES 等部分加载完毕。~~
-
-![vscode-antlr](https://github.com/ACMClassCourse-2023/Python-Interpreter-2023/blob/main/docs/vscode-antlr.png)
-
-~~接下来配置运行文件。点击左侧的运行和调试，创建 `launch.json` 文件，并写入~~
-
-```javascript
-{ 
-     "version": "2.3.1", 
-     "configurations": [ 
-     
-          { 
-               "name": "Debug ANTLR4 grammar", 
-               "type": "antlr-debug", 
-               "request": "launch", 
-               "input": "./a.txt", // 输入文件（即你要运行的 Python 代码文件） 
-               "grammar": "./resources/Python3Parser.g4", // 语法文件
-               "startRule": "file_input", // 语法入口规则，我们的公式语法入口规则是 file_input
-               "printParseTree": true, // 是否 打印/可视化 parse tree 
-               "visualParseTree": true 
-          } 
-     ] 
-} 
-```
-
-~~最后打开要运行的文件，在左侧的运行和调试中，点击运行即可生成，如下图所示。~~
-
-![vscode-antlr-result](https://github.com/ACMClassCourse-2023/Python-Interpreter-2023/blob/main/docs/vscode-antlr-result.png)
-
-#### ~~使用 Clion 插件~~（由于增加语法的原因已弃用）
-
-~~由于本次 `.g4` 文件的特性，目前 ANTLR 插件只能支持不带 `INDENT` 和 `DEDENT` 规则的解释。~~
-
-~~首先在插件市场中找到插件：~~
-
-![plugin-market](https://github.com/ACMClassCourse-2023/Python-Interpreter-2023/blob/main/docs/plugin-market.png)
-
-~~安装后，右键 `.g4` 中的 `return_stmt` 或任何不包含 `INDENT` 和 `DEDENT` 的规则，点击 `test rule`：~~
-
-![right-click](https://github.com/ACMClassCourse-2023/Python-Interpreter-2023/blob/main/docs/right-click.png)
-
-~~之后在屏幕下方的 `antlr-preview` 中，左侧是待测试的代码，右侧是依据代码生成的语法树结构图。~~
-
 #### 使用ANTLR内置的可视化工具
 首先，请确保ANTLR4的jar包已经被正常安装至`/usr/local/lib`。并进入`./resources`目录：
 
