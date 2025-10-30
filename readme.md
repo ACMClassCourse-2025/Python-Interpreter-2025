@@ -75,7 +75,7 @@ CornerTest: 57 - 66
 
 ### 🧪实现
 
-如果你想知道从何下手，可以参考 [完成流程](docs/workflow_details.md) 与 [实现细节](docs/implementation_details.md)。
+如果你想知道从何下手，可以参考 [完成流程](docs/workflow_details.md)。
 
 ### 📇索引
 
