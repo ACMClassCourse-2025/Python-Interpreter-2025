@@ -27,7 +27,14 @@ pacman -S antlr4-runtime
 ### 生成语法树
 
 #### 使用ANTLR内置的可视化工具
-首先，请确保ANTLR4的jar包已经被正常安装至`/usr/local/lib`。并进入`./resources`目录：
+
+请确保ANTLR4的jar包已经被正常安装至 `/usr/local/lib`，如果没有，先运行
+
+```bash
+sudo wget https://www.antlr.org/download/antlr-4.13.1-complete.jar --directory-prefix=/usr/local/lib
+```
+
+进行安装。然后 `./resources`目录：
 
 ```bash
 cd resources
