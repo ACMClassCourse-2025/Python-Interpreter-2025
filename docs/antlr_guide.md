@@ -34,7 +34,7 @@ pacman -S antlr4-runtime
 sudo wget https://www.antlr.org/download/antlr-4.13.1-complete.jar --directory-prefix=/usr/local/lib
 ```
 
-进行安装。然后 `./resources`目录：
+进行安装。然后进入 `./resources` 目录：
 
 ```bash
 cd resources
