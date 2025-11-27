@@ -126,7 +126,7 @@ not
     # output: True == True.
     
     print(f"The value of f\"{{True}}\" is \"{True}\"")
-    # output: The formation of f"{True}" is "True"
+    # output: The value of f"{True}" is "True"
     ```
     
     （涉及了一些后面出现的语法，可以看完后回来理解。）
